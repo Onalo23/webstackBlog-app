@@ -19,7 +19,20 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-mongoose.connect('mongodb+srv://conalo:0OYPTUeBQF1Mq9uX@cluster0.llwxnnv.mongodb.net/?retryWrites=true&w=majority&webstackBlog-app=Cluster0');
+// Option 1: Set strictQuery to false (default behavior in Mongoose 7)
+mongoose.set('strictQuery', false);
+
+// Option 2: Set strictQuery to true (current behavior)
+mongoose.set('strictQuery', true);
+
+mongoose.connect('mongodb+srv://onalo:6cMQahK60U38RBRt@my-db.7nq3djm.mongodb.net/', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch((e) => {
+  console.error('Error connecting to MongoDB', err);
+});
 
 app.post('/register', async (req,res) => {
   const {username,password} = req.body;

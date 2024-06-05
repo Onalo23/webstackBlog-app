@@ -8,10 +8,12 @@
     "@testing-library/user-event": "^13.2.1",
     "date-fns": "^2.29.3",
     "eslint-plugin-react-hooks": "^5.1.0-rc-9d4fba0788-20240530",
+    "global": "^4.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-quill": "^2.0.0",
     "react-scripts": "5.0.1",
+    "server": "^1.0.39",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

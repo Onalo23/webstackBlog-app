@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {useContext, useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import {formatISO9075} from "date-fns";
@@ -15,7 +16,7 @@ export default function PostPage() {
           setPostInfo(postInfo);
         });
       });
-  }, [id]);
+  }, []);
 
   if (!postInfo) return '';
 

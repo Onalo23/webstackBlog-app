@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import {formatISO9075} from "date-fns";
 import {Link} from "react-router-dom";
 
